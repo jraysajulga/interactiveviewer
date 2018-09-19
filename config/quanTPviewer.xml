@@ -8,7 +8,16 @@
                 QuanTP
             </test>
             <test test_attr="creating_job.tool_id">
-                toolshed.g2.bx.psu.edu/repos/galaxyp/quantp/cravatool/1.0.0
+                toolshed.g2.bx.psu.edu/repos/galaxyp/quantp/quantp/1.0.0
+            </test>
+            <test test_attr="creating_job.tool_id">
+                toolshed.g2.bx.psu.edu/repos/galaxyp/quantp/1.0.0
+            </test>
+            <test test_attr="creating_job.tool_id">
+                toolshed.g2.bx.psu.edu/repos/galaxyp/quantp/quantp
+            </test>
+            <test test_attr="creating_job.tool_id">
+                toolshed.g2.bx.psu.edu/repos/galaxyp/quantp
             </test>
             <to_param param_attr="id">dataset_id</to_param>
         </data_source>
@@ -16,6 +25,6 @@
     <params>
         <param type="dataset" var_name_in_template="hda" required="true">dataset_id</param>
     </params>
-    <template>cravatviewer.mako</template>
+    <template>quanTPviewer.mako</template>
     <render_target>_blank</render_target>
 </visualization>
