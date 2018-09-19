@@ -5,7 +5,7 @@
         <data_source>
             <model_class>HistoryDatasetAssociation</model_class>
             <test test_attr="creating_job.tool_id">
-                QuanTP
+                quantp
             </test>
             <test test_attr="creating_job.tool_id">
                 toolshed.g2.bx.psu.edu/repos/galaxyp/quantp/quantp/1.0.0
