@@ -20,11 +20,23 @@
 
     </head>
     <body>
-        <div class="chart-header">
-        </div>
-
-        <div id="container">
-            HELLO
-        </div>
     </body>
+    <script type="text/javascript">
+        $(function() {
+            var ID = '${hdadict["id"]}';
+            var xhr = jQuery.getJSON('/api/datasets/' + ID, {
+                data_type : 'raw_data',
+                provider  : 'base'
+            });
+
+            xhr.done(function(response){
+                console.log("DONE");
+                var html = response.data;
+                if (html[0].indexOf("head") >= 0){
+                    html.shift();
+                }
+                $('body').html(html);
+            });
+        });
+    </script>
 </html>
