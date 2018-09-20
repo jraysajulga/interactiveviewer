@@ -28,6 +28,7 @@
                 data_type : 'raw_data',
                 provider  : 'base'
             });
+            console.log(ID);
 
             xhr.done(function(response){
                 console.log("DONE");
@@ -35,7 +36,10 @@
                 if (html[0].indexOf("head") >= 0){
                     html.shift();
                 }
-                $('body').html(html);
+                //$('body').html(html);
+                var head_start = html.indexOf('<head>\n') + 1;
+                var head_end   = html.indexOf('</head>\n');
+                console.log(html.slice(head_start,head_end));
             });
         });
     </script>
