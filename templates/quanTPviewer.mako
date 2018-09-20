@@ -33,13 +33,18 @@
             xhr.done(function(response){
                 console.log("DONE");
                 var html = response.data;
-                if (html[0].indexOf("head") >= 0){
-                    html.shift();
-                }
-                //$('body').html(html);
-                var head_start = html.indexOf('<head>\n') + 1;
-                var head_end   = html.indexOf('</head>\n');
-                console.log(html.slice(head_start,head_end));
+
+                var prescripts = html.slice(
+                    html.indexOf('<head>\n') + 1,
+                    html.indexOf('</head>\n'));
+
+                prescripts.pop();
+                prescripts.shift();
+                prescripts = prescripts.join('').split("").reverse().join("");
+
+                $('head').html(prescripts);
+
+                console.log(prescripts.slice(0,40));
             });
         });
     </script>
