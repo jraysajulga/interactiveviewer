@@ -4,7 +4,7 @@
     <data_sources>
         <data_source>
             <model_class>HistoryDatasetAssociation</model_class>
-            <test test_attr="creating_job.tool_id">
+            <!--<test test_attr="creating_job.tool_id">
                 quantp
             </test>
             <test test_attr="creating_job.tool_id">
@@ -18,7 +18,7 @@
             </test>
             <test test_attr="creating_job.tool_id">
                 toolshed.g2.bx.psu.edu/repos/galaxyp/quantp
-            </test>
+            </test>-->
             <to_param param_attr="id">dataset_id</to_param>
         </data_source>
     </data_sources>
