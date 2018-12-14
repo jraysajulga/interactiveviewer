@@ -65,7 +65,7 @@
                     ${row.replace('PE_TE_heatmap_files', 'static/js')}
                 % endif
             % elif '.txt' in row:
-                ${row}
+                ${row.replace("<","[").replace(">","]")}
                 ${row.replace("href='", "href='/datasets/" + hdadict['id'] + "/display/").replace('href="', 'href="/datasets/' + hdadict['id'] + '/display/')}
             % else:
                 ${re_img.sub("",row).replace('<!--', '').replace('-->','')}
