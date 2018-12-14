@@ -18,6 +18,7 @@
         %  for i, row in enumerate(data):
             % if 'script src' in row or 'link href' in row:
                 ${row.replace('Box_TE_all_rep_files', 'static/js')}
+                ${row.replace('PE_TE_heatmap_files', 'static/js')}
             % else:
                 ${re_img.sub("",row).replace('<!--', '').replace('-->','')}
             % endif
