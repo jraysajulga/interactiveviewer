@@ -1,12 +1,12 @@
 <%
-    default_title = "QuanTP"
+    default_title = "Interactive Viewer"
     info = hda.name
     if hda.info:
         info += ' : ' + hda.info
     root            = h.url_for( "/static/" )
 
     data =  hda.datatype.dataprovider(hda, 'base')
-    app_root        = root + "plugins/visualizations/quanTP/static"
+    app_root        = root + "plugins/visualizations/interactiveviewer/static"
     app_root = "static/js"
     hdadict = trans.security.encode_dict_ids( hda.to_dict() )
     import re

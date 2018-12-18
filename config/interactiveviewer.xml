@@ -37,5 +37,5 @@
     <params>
         <param type="dataset" var_name_in_template="hda" required="true">dataset_id</param>
     </params>
-    <template>quanTPviewer.mako</template>
+    <template>interactiveviewer.mako</template>
 </visualization>
